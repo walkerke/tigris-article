@@ -375,6 +375,13 @@ tm_credits('Data source: 2008-2012 American Community Survey',
 \end{Sinput}
 \end{Schunk}
 
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{income_map}
+  \caption{Map of median household income by Census tract in the Dallas-Fort Worth, Texas metropolitan area.}
+  \label{figure:income_map}
+\end{figure}
+
 The resultant map is comparable to cartographic output from a desktop
 geographic information system, and can be produced entirely within R
 without having to seek out and download data externally.
@@ -477,9 +484,16 @@ ggmap(get_map(location = 'Fargo', zoom = 12, source = 'stamen', maptype = 'toner
 \end{Sinput}
 \end{Schunk}
 
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{fargo_map}
+  \caption{Block groups in Fargo, North Dakota within 500m of the Red River.}
+  \label{figure:fargo_map}
+\end{figure}
+
 In this example, the entire process of data retrieval and subsetting
-through spatial analysis, commonly a multi-step process in a traditional
-GIS environment, is reduced to a few lines of R code.
+through spatial analysis, which commonly requires multiple steps in a
+traditional GIS environment, is reduced to a few lines of R code.
 
 \subsection{Putting it all together: mapping data from the US Internal
 Revenue
@@ -577,7 +591,8 @@ map_zips <- function(data, palette = "PuRd") {
 
   pal <- colorQuantile(palette, NULL, n = 7, na.color = '#DBDBDB')
   
-  label <- paste0("Zip Code ", data_merged\$ZCTA5CE10, ": \$", as.character(round(1000 * data_merged\$incpr, 2)))
+  label <- paste0("Zip Code ", data_merged\$ZCTA5CE10, ": \$", 
+                  as.character(round(1000 * data_merged\$incpr, 2)))
   
   leaflet() %>%
     addProviderTiles("CartoDB.DarkMatter") %>%
@@ -605,13 +620,25 @@ get_zips('Nashville') %>% map_zips()
 \end{Sinput}
 \end{Schunk}
 
-(image here)
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{nashville}
+  \caption{Interactive Leaflet map of average reported IRS income by zip code, Nashville, Tennessee area.}
+  \label{figure:nashville}
+\end{figure}
 
 \begin{Schunk}
 \begin{Sinput}
 get_zips('Sacramento') %>% map_zips(palette = 'YlGnBu')
 \end{Sinput}
 \end{Schunk}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{sacramento}
+  \caption{Interactive Leaflet map of average reported IRS income by zip code, Sacramento, California area.}
+  \label{figure:sacramento}
+\end{figure}
 
 \subsection{Conclusion}\label{conclusion}
 

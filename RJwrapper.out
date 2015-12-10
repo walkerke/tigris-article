@@ -1,8 +1,0 @@
-\BOOKMARK [0][-]{section*.1}{Geographic visualization and analysis in R with tigris}{}% 1
-\BOOKMARK [1][-]{subsection.2.0.1}{Introduction}{section*.1}% 2
-\BOOKMARK [2][-]{subsection.2.0.2}{Geographic data and Census visualization in R}{subsection.2.0.1}% 3
-\BOOKMARK [2][-]{subsection.2.0.3}{Core functionality}{subsection.2.0.1}% 4
-\BOOKMARK [2][-]{subsection.2.0.4}{Visualization with tigris}{subsection.2.0.1}% 5
-\BOOKMARK [2][-]{subsection.2.0.5}{Spatial analysis with tigris}{subsection.2.0.1}% 6
-\BOOKMARK [2][-]{subsection.2.0.6}{Putting it all together: mapping data from the US Internal Revenue Service}{subsection.2.0.1}% 7
-\BOOKMARK [2][-]{subsection.2.0.7}{Conclusion}{subsection.2.0.1}% 8

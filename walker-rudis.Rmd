@@ -202,6 +202,13 @@ tm_credits('Data source: 2008-2012 American Community Survey',
 
 ```
 
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{income_map}
+  \caption{Map of median household income by Census tract in the Dallas-Fort Worth, Texas metropolitan area.}
+  \label{figure:income_map}
+\end{figure}
+
 The resultant map is comparable to cartographic output from a desktop geographic information system, and can be produced entirely within R without having to seek out and download data externally.  
 
 
@@ -262,7 +269,14 @@ ggmap(get_map(location = 'Fargo', zoom = 12, source = 'stamen', maptype = 'toner
 
 ```
 
-In this example, the entire process of data retrieval and subsetting through spatial analysis, commonly a multi-step process in a traditional GIS environment, is reduced to a few lines of R code.  
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{fargo_map}
+  \caption{Block groups in Fargo, North Dakota within 500m of the Red River.}
+  \label{figure:fargo_map}
+\end{figure}
+
+In this example, the entire process of data retrieval and subsetting through spatial analysis, which commonly requires multiple steps in a traditional GIS environment, is reduced to a few lines of R code.  
 
 ## Putting it all together: mapping data from the US Internal Revenue Service
 
@@ -354,16 +368,29 @@ The analyst can then call the functions to create custom IRS taxation maps by me
 get_zips('Nashville') %>% map_zips()
 ```
 
-(image here)
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{nashville}
+  \caption{Interactive Leaflet map of average reported IRS income by zip code, Nashville, Tennessee area.}
+  \label{figure:nashville}
+\end{figure}
 
 ```{r, eval = FALSE}
 get_zips('Sacramento') %>% map_zips(palette = 'YlGnBu')
 ```
 
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{sacramento}
+  \caption{Interactive Leaflet map of average reported IRS income by zip code, Sacramento, California area.}
+  \label{figure:sacramento}
+\end{figure}
 
 ## Conclusion
     
-Some comments here about how tigris fits in with other geospatial analysis and visualization packages; how the R ecosystem rivals traditional desktop GIS in its functionality and in many ways is more flexible.  
+This paper has summarized several ways in which R users commonly work with spatial data, and how the __tigris__ package can facilitate, improve, and simplify those workflows.  Access to high-quality spatial data is essential for the geospatial analyst; to respond to this, __tigris__ provides direct access to the Census Bureau's TIGER/Line and cartographic boundary files using a simple and consistent API.  
+
+More broadly, the examples presented in this article illustrate some clear advantages that R has over traditional desktop Geographic Information Systems software in the areas of geographic analysis and visualization.  Certainly, code-based workflows in R make geospatial analyses reproducible, which has long been an issue with desktop GIS software, which -- while scriptable -- is often manipulated using a graphical user interface.  The examples in this article show that an entire geospatial workflow -- from data acquisition to data preparation to spatial analysis to static or interactive cartography -- can take place entirely within R.  
 
 
 
