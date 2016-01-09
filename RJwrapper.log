@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.8.12)  9 DEC 2015 21:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.8.12)  15 DEC 2015 10:09
 entering extended mode
 **C:/Users/kylewalker/Dropbox/Research/tigris-article/tigris-article/RJwrapper.
 tex
@@ -1155,44 +1155,16 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 Package natbib Warning: Citation `Census' on page 1 undefined on input line 39.
 
 
-C:\Users\kylewalker\Dropbox\Research\tigris-article\tigris-article\walker-rudis
-.tex:52: Undefined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-C:\Users\kylewalker\Dropbox\Research\tigris-article\tigris-article\walker-rudis
-.tex:53: Undefined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-C:\Users\kylewalker\Dropbox\Research\tigris-article\tigris-article\walker-rudis
-.tex:54: Undefined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-LaTeX Font Info:    Try loading font information for TS1+ppl on input line 65.
-
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 63.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ts1ppl.fd"
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
 
 Package natbib Warning: Citation `Census2015' on page 1 undefined on input line
- 94.
-
+ 92.
 
 C:\Users\kylewalker\Dropbox\Research\tigris-article\tigris-article\walker-rudis
-.tex:103: Undefined control sequence
+.tex:101: Undefined control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1202,91 +1174,48 @@ and I'll forget about whatever was undefined.
  [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-<walker-rudis_files/figure-latex/unnamed-chunk-1-1.pdf, id=23, 469.755pt x 325.
-215pt>
-File: walker-rudis_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (type 
-pdf)
-
-<use walker-rudis_files/figure-latex/unnamed-chunk-1-1.pdf>
-Package pdftex.def Info: walker-rudis_files/figure-latex/unnamed-chunk-1-1.pdf 
-used on input line 115.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (86.41528pt too wide) in paragraph at lines 115--116
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
-
- []
-
+<states.png, id=22, 556.32843pt x 365.11406pt>
+File: states.png Graphic file (type png)
+ <use states.png>
+Package pdftex.def Info: states.png used on input line 116.
+(pdftex.def)             Requested size: 398.33858pt x 261.42783pt.
 
 C:\Users\kylewalker\Dropbox\Research\tigris-article\tigris-article\walker-rudis
-.tex:120: Undefined control sequence
+.tex:124: Undefined control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-LaTeX Font Info:    Try loading font information for TS1+zi4 on input line 132.
+LaTeX Font Info:    Try loading font information for TS1+zi4 on input line 136.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\inconsolata\ts1zi4.fd"
 File: ts1zi4.fd 2014/06/22 Fontinst v1.933 font definitions for TS1/zi4.
 )
 LaTeX Font Info:    Font shape `TS1/zi4/m/n' will be
-(Font)              scaled to size 9.18004pt on input line 132.
+(Font)              scaled to size 9.18004pt on input line 136.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `zi4' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-<walker-rudis_files/figure-latex/unnamed-chunk-2-1.pdf, id=24, 469.755pt x 325.
-215pt>
-File: walker-rudis_files/figure-latex/unnamed-chunk-2-1.pdf Graphic file (type 
-pdf)
+<rhode-island.png, id=23, 510.40688pt x 323.70938pt>
+File: rhode-island.png Graphic file (type png)
+ <use rhode-island.png>
+Package pdftex.def Info: rhode-island.png used on input line 148.
+(pdftex.def)             Requested size: 398.33858pt x 252.64542pt.
+ [2 <C:/Users/kylewalker/Dropbox/Research/tigris-article/tigris-article/states.
+png>]
+<kalawao.png, id=31, 510.40688pt x 323.70938pt>
+File: kalawao.png Graphic file (type png)
+ <use kalawao.png>
+Package pdftex.def Info: kalawao.png used on input line 180.
+(pdftex.def)             Requested size: 398.33858pt x 252.64542pt.
 
-<use walker-rudis_files/figure-latex/unnamed-chunk-2-1.pdf>
-Package pdftex.def Info: walker-rudis_files/figure-latex/unnamed-chunk-2-1.pdf 
-used on input line 146.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (86.41528pt too wide) in paragraph at lines 146--147
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
-
- []
-
- [2 <C:/Users/kylewalker/Dropbox/Research/tigris-article/tigris-article/walker-
-rudis_files/figure-latex/unnamed-chunk-1-1.pdf>]
-<walker-rudis_files/figure-latex/unnamed-chunk-3-1.pdf, id=33, 469.755pt x 325.
-215pt>
-File: walker-rudis_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type 
-pdf)
-
-<use walker-rudis_files/figure-latex/unnamed-chunk-3-1.pdf>
-Package pdftex.def Info: walker-rudis_files/figure-latex/unnamed-chunk-3-1.pdf 
-used on input line 177.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (86.41528pt too wide) in paragraph at lines 177--178
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
-
- []
-
- [3 <C:/Users/kylewalker/Dropbox/Research/tigris-article/tigris-article/walker-
-rudis_files/figure-latex/unnamed-chunk-2-1.pdf>]
 C:\Users\kylewalker\Dropbox\Research\tigris-article\tigris-article\walker-rudis
-.tex:180: Undefined control sequence
+.tex:186: Undefined control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1294,31 +1223,15 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-<walker-rudis_files/figure-latex/unnamed-chunk-5-1.pdf, id=41, 469.755pt x 325.
-215pt>
-File: walker-rudis_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type 
-pdf)
-
-<use walker-rudis_files/figure-latex/unnamed-chunk-5-1.pdf>
-Package pdftex.def Info: walker-rudis_files/figure-latex/unnamed-chunk-5-1.pdf 
-used on input line 218.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (86.41528pt too wide) in paragraph at lines 218--219
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
-
- []
-
- [4 <C:/Users/kylewalker/Dropbox/Research/tigris-article/tigris-article/walker-
-rudis_files/figure-latex/unnamed-chunk-3-1.pdf>]
+<maui_kw.png, id=32, 510.40688pt x 323.70938pt>
+File: maui_kw.png Graphic file (type png)
+ <use maui_kw.png>
+Package pdftex.def Info: maui_kw.png used on input line 222.
+(pdftex.def)             Requested size: 398.33858pt x 252.64542pt.
 LaTeX Font Info:    Font shape `T1/zi4/bx/n' in size <10> not available
-(Font)              Font shape `T1/zi4/b/n' tried instead on input line 232.
+(Font)              Font shape `T1/zi4/b/n' tried instead on input line 239.
 LaTeX Font Info:    Font shape `T1/zi4/b/n' will be
-(Font)              scaled to size 10.20004pt on input line 232.
+(Font)              scaled to size 10.20004pt on input line 239.
 Package microtype Info: Character `textendash ' is missing
 (microtype)             in font `T1/zi4/b/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1327,7 +1240,7 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             Ignoring protrusion settings for this character.
 
 C:\Users\kylewalker\Dropbox\Research\tigris-article\tigris-article\walker-rudis
-.tex:238: Undefined control sequence
+.tex:245: Undefined control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1336,37 +1249,25 @@ and I'll forget about whatever was undefined.
 
 
 C:\Users\kylewalker\Dropbox\Research\tigris-article\tigris-article\walker-rudis
-.tex:240: Undefined control sequence
+.tex:247: Undefined control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+ [3 <C:/Users/kylewalker/Dropbox/Research/tigris-article/tigris-article/rhode-i
+sland.png>] [4 <C:/Users/kylewalker/Dropbox/Research/tigris-article/tigris-arti
+cle/kalawao.png> <C:/Users/kylewalker/Dropbox/Research/tigris-article/tigris-ar
+ticle/maui_kw.png>]
+<vt_districts.png, id=48, 510.40688pt x 323.70938pt>
+File: vt_districts.png Graphic file (type png)
+ <use vt_districts.png>
+Package pdftex.def Info: vt_districts.png used on input line 272.
+(pdftex.def)             Requested size: 398.33858pt x 252.64542pt.
 
-<walker-rudis_files/figure-latex/unnamed-chunk-6-1.pdf, id=49, 469.755pt x 325.
-215pt>
-File: walker-rudis_files/figure-latex/unnamed-chunk-6-1.pdf Graphic file (type 
-pdf)
-
-<use walker-rudis_files/figure-latex/unnamed-chunk-6-1.pdf>
-Package pdftex.def Info: walker-rudis_files/figure-latex/unnamed-chunk-6-1.pdf 
-used on input line 270.
-(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Overfull \hbox (86.41528pt too wide) in paragraph at lines 270--271
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 270--271
-
- []
-
- [5 <C:/Users/kylewalker/Dropbox/Research/tigris-article/tigris-article/walker-
-rudis_files/figure-latex/unnamed-chunk-5-1.pdf>]
 C:\Users\kylewalker\Dropbox\Research\tigris-article\tigris-article\walker-rudis
-.tex:286: Undefined control sequence
+.tex:291: Undefined control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1375,7 +1276,7 @@ and I'll forget about whatever was undefined.
 
 
 C:\Users\kylewalker\Dropbox\Research\tigris-article\tigris-article\walker-rudis
-.tex:287: Undefined control sequence
+.tex:292: Undefined control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1384,33 +1285,33 @@ and I'll forget about whatever was undefined.
 
 
 C:\Users\kylewalker\Dropbox\Research\tigris-article\tigris-article\walker-rudis
-.tex:290: Undefined control sequence
+.tex:295: Undefined control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
- [6 <C:/Users/kylewalker/Dropbox/Research/tigris-article/tigris-article/walker-
-rudis_files/figure-latex/unnamed-chunk-6-1.pdf>]
-<income_map.png, id=66, 578.16pt x 433.62pt>
+ [5 <C:/Users/kylewalker/Dropbox/Research/tigris-article/tigris-article/vt_dist
+ricts.png>]
+<income_map.png, id=56, 578.16pt x 433.62pt>
 File: income_map.png Graphic file (type png)
  <use income_map.png>
-Package pdftex.def Info: income_map.png used on input line 380.
+Package pdftex.def Info: income_map.png used on input line 385.
 (pdftex.def)             Requested size: 398.33858pt x 298.75482pt.
-
+ [6]
 C:\Users\kylewalker\Dropbox\Research\tigris-article\tigris-article\walker-rudis
-.tex:395: Undefined control sequence
+.tex:400: Undefined control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
- [7] [8 <C:/Users/kylewalker/Dropbox/Research/tigris-article/tigris-article/inc
-ome_map.png>]
+ [7 <C:/Users/kylewalker/Dropbox/Research/tigris-article/tigris-article/income_
+map.png>]
 C:\Users\kylewalker\Dropbox\Research\tigris-article\tigris-article\walker-rudis
-.tex:471: Undefined control sequence
+.tex:476: Undefined control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1418,15 +1319,14 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-<fargo_map.png, id=79, 645.1302pt x 464.4552pt>
+<fargo_map.png, id=69, 645.1302pt x 464.4552pt>
 File: fargo_map.png Graphic file (type png)
  <use fargo_map.png>
-Package pdftex.def Info: fargo_map.png used on input line 489.
+Package pdftex.def Info: fargo_map.png used on input line 494.
 (pdftex.def)             Requested size: 398.33858pt x 286.77571pt.
- [9 <C:/Users/kylewalker/Dropbox/Research/tigris-article/tigris-article/fargo_m
-ap.png (PNG copy)>]
+
 C:\Users\kylewalker\Dropbox\Research\tigris-article\tigris-article\walker-rudis
-.tex:522: Undefined control sequence
+.tex:527: Undefined control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1435,7 +1335,17 @@ and I'll forget about whatever was undefined.
 
 
 C:\Users\kylewalker\Dropbox\Research\tigris-article\tigris-article\walker-rudis
-.tex:528: Undefined control sequence
+.tex:533: Undefined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+ [8] [9 <C:/Users/kylewalker/Dropbox/Research/tigris-article/tigris-article/far
+go_map.png (PNG copy)>]
+C:\Users\kylewalker\Dropbox\Research\tigris-article\tigris-article\walker-rudis
+.tex:584: Undefined control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1444,7 +1354,7 @@ and I'll forget about whatever was undefined.
 
 
 C:\Users\kylewalker\Dropbox\Research\tigris-article\tigris-article\walker-rudis
-.tex:579: Undefined control sequence
+.tex:586: Undefined control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1452,25 +1362,16 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:\Users\kylewalker\Dropbox\Research\tigris-article\tigris-article\walker-rudis
-.tex:581: Undefined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
- [10]
-<nashville.png, id=90, 954.56625pt x 733.23938pt>
+<nashville.png, id=80, 954.56625pt x 733.23938pt>
 File: nashville.png Graphic file (type png)
  <use nashville.png>
-Package pdftex.def Info: nashville.png used on input line 625.
+Package pdftex.def Info: nashville.png used on input line 630.
 (pdftex.def)             Requested size: 398.33858pt x 305.9781pt.
 
-<sacramento.png, id=92, 1164.60094pt x 722.7pt>
+<sacramento.png, id=82, 1164.60094pt x 722.7pt>
 File: sacramento.png Graphic file (type png)
  <use sacramento.png>
-Package pdftex.def Info: sacramento.png used on input line 638.
+Package pdftex.def Info: sacramento.png used on input line 643.
 (pdftex.def)             Requested size: 398.33858pt x 247.1814pt.
 
 (C:\Users\kylewalker\Dropbox\Research\tigris-article\tigris-article\RJwrapper.b
@@ -1484,31 +1385,31 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
 Package natbib Warning: Empty `thebibliography' environment on input line 8.
 
 )
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 657.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 675.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ppl.fd"
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 657
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 675
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlzplm.fd"
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 657
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 675
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omszplm.fd"
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 657
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 675
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omxzplm.fd"
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 657
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 675
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1zplm.fd"
@@ -1519,52 +1420,52 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 657.
+(Font)              scaled to size 9.37807pt on input line 675.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-msa.cfg"
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 657.
+(Font)              scaled to size 7.29405pt on input line 675.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 657.
+(Font)              scaled to size 5.21004pt on input line 675.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 657.
+(Font)              scaled to size 9.37807pt on input line 675.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-msb.cfg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 657.
+(Font)              scaled to size 7.29405pt on input line 675.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 657.
- [11 <C:/Users/kylewalker/Dropbox/Research/tigris-article/tigris-article/nashvi
-lle.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 663--664
+(Font)              scaled to size 5.21004pt on input line 675.
+
+Underfull \hbox (badness 10000) in paragraph at lines 681--682
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 663--664
+Underfull \hbox (badness 10000) in paragraph at lines 681--682
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 663--664
+Underfull \hbox (badness 10000) in paragraph at lines 681--682
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 663--664
+Underfull \hbox (badness 10000) in paragraph at lines 681--682
 
  []
 
-)
+ [10] [11 <C:/Users/kylewalker/Dropbox/Research/tigris-article/tigris-article/n
+ashville.png> <C:/Users/kylewalker/Dropbox/Research/tigris-article/tigris-artic
+le/sacramento.png>])
 
 Package natbib Warning: There were undefined citations.
 
- [12 <C:/Users/kylewalker/Dropbox/Research/tigris-article/tigris-article/sacram
-ento.png>]
+ [12]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 27.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 27.
 
@@ -1588,13 +1489,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 27.
  ) 
 Here is how much of TeX's memory you used:
- 21533 strings out of 493921
- 385613 string characters out of 3147267
- 478140 words of memory out of 3000000
- 24213 multiletter control sequences out of 15000+200000
- 36584 words of font info for 157 fonts, out of 3000000 for 9000
+ 21548 strings out of 493921
+ 384960 string characters out of 3147267
+ 477140 words of memory out of 3000000
+ 24218 multiletter control sequences out of 15000+200000
+ 36902 words of font info for 161 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 62i,12n,56p,493b,640s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,11n,56p,493b,644s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{C:/Prog
 ram Files/MiKTeX 2.9/fonts/enc/dvips/inconsolata/i4-ts1.enc}{C:/Program Files/M
 iKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/ty
@@ -1603,9 +1504,9 @@ type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/pa
 latino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a
 .pfb>
-Output written on RJwrapper.pdf (12 pages, 3515635 bytes).
+Output written on RJwrapper.pdf (12 pages, 2397757 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
+ 130 PDF objects out of 1000 (max. 8388607)
+ 32 named destinations out of 1000 (max. 500000)
  31802 words of extra memory for PDF output out of 35830 (max. 10000000)
 

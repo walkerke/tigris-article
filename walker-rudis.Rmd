@@ -26,7 +26,7 @@ output: rticles::rjournal_article
 Analysis and visualization of geographic data are often core components of the analytical workflow for researchers and data scientists; as such, access to open and reliable geographic datasets are of paramount importance.  The United States Census Bureau provides access to such data in the form of its TIGER/Line shapefile products.  The files are extracts from the Census Bureau's Master Address File/Topologically Integrated Geographic Encoding and Referencing (TIGER) database, which in turn are released to the public as shapefiles, a common format for encoding geographic data as vectors (e.g. points, lines, and polygons).  Available TIGER/Line shapefiles include all of the Census Bureau's areal enumeration units, such as states, counties, Census tracts, and Census blocks; transportation data such as roads and railways; and both linear and areal hydrography.  The TIGER/Line files are updated annually, and include columns that allow them to be joined with other tabular data, including demographic data products released by the Census Bureau \citep{Census}.
 
 
-The \CRANpkg{tigris} package aims to simplify the process of working with these datasets for R users.  With functions in tigris, R users can specify the data type and geography for which they would like to obtain geographic data, and return the corresponding TIGER/Line data as an R object of class `Spatial*DataFrame` as read in by the `rgdal` package.  This article provides an overview of the `tigris` package, and gives examples that show how it can contribute to common geographic visualization and spatial analysis workflows in R.  The first section explains the core functionality of the package; the second section discusses how R users can create both static and interactive visualizations with data from the package, leveraging functionality in R packages like \CRANpkg{ggplot2}, \CRANPkg{rgeos}, and \CRANPkg{leaflet}; and the final section shows how tigris can integrate with spatial statistics packages like \CRANPkg{GWModel} to facilitate geospatial analyses.  
+The \CRANpkg{tigris} package aims to simplify the process of working with these datasets for R users.  With functions in tigris, R users can specify the data type and geography for which they would like to obtain geographic data, and return the corresponding TIGER/Line data as an R object of class `Spatial*DataFrame` as read in by the `rgdal` package.  This article provides an overview of the `tigris` package, and gives examples that show how it can contribute to common geographic visualization and spatial analysis workflows in R.  Examples in the article include a discussion of the core functionality of the package; how R users can create  static maps with data from the package; how to use __tigris__ for spatial data analysis; and how to put all of this together in a workflow to produce a series of interactive web-based maps.  
 
 ## Geographic data and Census visualization in R
 
@@ -36,6 +36,7 @@ To cover:
 * Objects of class `Spatial` in R and the `rgdal` package
 * Other packages, including: 
     * `USCensus2010`
+    * `USABoundaries`
     * `acs`
     * `choroplethr`
 * Space `tigris` occupies - uniform interface for downloading and delimiting all TIGER/Line and cartographic boundary shapefiles
@@ -46,7 +47,7 @@ The core functionality in tigris involves the usage of a series of functions, ea
 
 To download geographic data using tigris, the R user calls the function corresponding to the desired geography.  For example, to obtain a `SpatialPolygonsDataFrame` of US states from the TIGER/Line dataset, the user calls the `states` function in tigris, which can then be plotted with the `plot` function from the \CRANPkg{sp} package: 
 
-```{r}
+```{r, eval = FALSE}
 library(tigris)
 library(sp)
 
@@ -56,9 +57,16 @@ plot(us_states)
 
 ```
 
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{states}
+  \caption{Basic plot of US states retrieved from the Census TIGER/Line database.}
+  \label{figure:states}
+\end{figure}
+
 The `states` function call instructs tigris to fetch a TIGER/Line shapefile from the US Census Bureau that represents the boundaries of the 50 US states, the District of Columbia, and US territories.  tigris then uses the \CRANPkg{rgdal} package to load the data into the user's R session as an object of class `Spatial DataFrame`.    Many functions in tigris have a parameter, `cb`, that if set to `TRUE` will direct tigris to load a cartographic boundary file instead.  Cartographic boundary files default to a simplified resolution of 1:500,000; in some cases, as with states, resolutions of 1:5 million and 1:20 million are example.  For example, an R user could specify the following modifications to the `states` function, and retrieve a simplified dataset. 
 
-```{r}
+```{r, eval = FALSE}
 us_states_20m <- states(cb = TRUE, resolution = '20m')
 
 ri <- us_states[us_states$NAME == 'Rhode Island', ]
@@ -69,16 +77,30 @@ plot(ri_20m, border = 'red', add = TRUE)
 
 ```
 
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{rhode-island}
+  \caption{Difference between default TIGER/Line and 1:20 million cartographic boundary outlines of Rhode Island.}
+  \label{figure:rhode_island}
+\end{figure}
+
 The plot illustrates some of the differences between the TIGER/Line shapefiles and the cartographic boundary files, in this instance for the state of Rhode Island.  TIGER/Line files include water area, whereas the cartographic boundary files do not; however, in interior areas, they are not nearly as detailed.  
 
 In many instances, Census geographic data are only available at sub-national levels, or the R user might want to specify how to subset the data geographically _a priori_ by state and optionally county.  Census geographic data are referenced, however, by their Federal Information Processing Standard (FIPS) codes, which are codes that uniquely identify geographic entities in the Census database.  When applicable, tigris uses smart state and county lookup to simplify this process for R users, allowing users to subset data based on the name or postal code of the desired state, or name of the county, rather than their FIPS codes. 
 
-```{r}
+```{r, eval = FALSE}
 kw_roads <- roads('HI', 'Kalawao')
 
 plot(kw_roads)
 
 ```
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{kalawao}
+  \caption{Roads in Kalawao County, Hawaii.}
+  \label{figure:kalawao}
+\end{figure}
 
 When tigris downloads Census shapefiles to the R user's computer, it uses the \CRANPkg{rappdirs} package to cache the downloads for future access.  In turn, once the R user has downloaded the Census geographic data, tigris will know where to look for it and will not need to re-download.  
 
@@ -90,16 +112,21 @@ tigris_type(kw_roads)
 
 ```
 
-```{r}
+```{r, eval = FALSE}
 
 maui_roads <- roads('HI', 'Maui')
 
 maui_kw_roads <- rbind_tigris(kw_roads, maui_roads)
 
 plot(maui_kw_roads)
-
-
 ```
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{maui_kw}
+  \caption{Roads in Maui County and Kalawao County, Hawaii.}
+  \label{figure:maui_kw}
+\end{figure}
 
 The Census Bureau releases updated TIGER/Line shapefiles every year, and these yearly updates are available to tigris users.  tigris defaults to the 2014 shapefiles, which at the time of this writing is the most recent year available for the cartographic boundary files.  However, tigris users can supply a different year to a tigris function as a named argument to obtain data for a different year; for example, `year = 2015` in the function call will fetch the most recent TIGER/Line shapefiles from 2015.  Additionally, R users can set this as a global option in their R session by entering the command `options(tigris_year = 2015)`.  
 
@@ -107,7 +134,7 @@ The Census Bureau releases updated TIGER/Line shapefiles every year, and these y
 
 A core component of geospatial analysis in R is mapping and visualization, and tigris assists with this by providing programmatic access to quality US Census geographic datasets for R users.  On a basic level, R users can quickly visualize tigris datasets with the `plot` function available in \CRANPkg{sp}, as evidenced in the examples above.  tigris objects also work well with the popular \CRANPkg{ggplot2} package for visualization in R.  The example below uses ggplot2 to visualize state legislative districts in Vermont from tigris: 
 
-```{r, warning = FALSE}
+```{r, eval = FALSE, warning = FALSE}
 
 library(tigris)
 library(ggplot2)
@@ -126,6 +153,13 @@ ggplot() +
   theme_map()
 
 ```
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{vt_districts}
+  \caption{State Senate districts in Vermont.}
+  \label{figure:vt_districts}
+\end{figure}
 
 Commonly, geographic visualization will involve more that just plotting the outlines of the data, however.  Instead, practitioners will want to use mapping to show the geographic distribution of some attribute of interest, which may be derived from some analysis in an R data frame.  To facilitate this process, tigris includes a function, `geo_join`, to ease the sometimes-messy process of merging tabular data to spatial data frames.  Such joined data can then be used for statistical mapping, such as with a choropleth map that shows variation in an attribute by the shading of polygons.  
 

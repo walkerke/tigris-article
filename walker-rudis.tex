@@ -46,13 +46,11 @@ object of class \texttt{Spatial*DataFrame} as read in by the
 \texttt{rgdal} package. This article provides an overview of the
 \texttt{tigris} package, and gives examples that show how it can
 contribute to common geographic visualization and spatial analysis
-workflows in R. The first section explains the core functionality of the
-package; the second section discusses how R users can create both static
-and interactive visualizations with data from the package, leveraging
-functionality in R packages like \CRANpkg{ggplot2}, \CRANPkg{rgeos}, and
-\CRANPkg{leaflet}; and the final section shows how tigris can integrate
-with spatial statistics packages like \CRANPkg{GWModel} to facilitate
-geospatial analyses.
+workflows in R. Examples in the article include a discussion of the core
+functionality of the package; how R users can create static maps with
+data from the package; how to use \textbf{tigris} for spatial data
+analysis; and how to put all of this together in a workflow to produce a
+series of interactive web-based maps.
 
 \subsection{Geographic data and Census visualization in
 R}\label{geographic-data-and-census-visualization-in-r}
@@ -111,8 +109,14 @@ us_states <- states()
 
 plot(us_states)
 \end{Sinput}
+\end{Schunk}
 
-\includegraphics{walker-rudis_files/figure-latex/unnamed-chunk-1-1} \end{Schunk}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{states}
+  \caption{Basic plot of US states retrieved from the Census TIGER/Line database.}
+  \label{figure:states}
+\end{figure}
 
 The \texttt{states} function call instructs tigris to fetch a TIGER/Line
 shapefile from the US Census Bureau that represents the boundaries of
@@ -130,20 +134,21 @@ simplified dataset.
 \begin{Schunk}
 \begin{Sinput}
 us_states_20m <- states(cb = TRUE, resolution = '20m')
-\end{Sinput}
-\begin{Soutput}
-#> Warning in readOGR(dsn = cache_dir, layer = shape, encoding = "UTF-8",
-#> verbose = FALSE, : Z-dimension discarded
-\end{Soutput}
-\begin{Sinput}
+
 ri <- us_states[us_states$NAME == 'Rhode Island', ]
 ri_20m <- us_states_20m[us_states_20m$NAME == 'Rhode Island', ]
 
 plot(ri)
 plot(ri_20m, border = 'red', add = TRUE)
 \end{Sinput}
+\end{Schunk}
 
-\includegraphics{walker-rudis_files/figure-latex/unnamed-chunk-2-1} \end{Schunk}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{rhode-island}
+  \caption{Difference between default TIGER/Line and 1:20 million cartographic boundary outlines of Rhode Island.}
+  \label{figure:rhode_island}
+\end{figure}
 
 The plot illustrates some of the differences between the TIGER/Line
 shapefiles and the cartographic boundary files, in this instance for the
@@ -165,16 +170,17 @@ their FIPS codes.
 \begin{Schunk}
 \begin{Sinput}
 kw_roads <- roads('HI', 'Kalawao')
-\end{Sinput}
-\begin{Soutput}
-#> Using FIPS code '15' for state 'HI'
-#> Using FIPS code '005' for 'Kalawao County'
-\end{Soutput}
-\begin{Sinput}
+
 plot(kw_roads)
 \end{Sinput}
+\end{Schunk}
 
-\includegraphics{walker-rudis_files/figure-latex/unnamed-chunk-3-1} \end{Schunk}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{kalawao}
+  \caption{Roads in Kalawao County, Hawaii.}
+  \label{figure:kalawao}
+\end{figure}
 
 When tigris downloads Census shapefiles to the R user's computer, it
 uses the \CRANPkg{rappdirs} package to cache the downloads for future
@@ -204,18 +210,19 @@ tigris_type(kw_roads)
 \begin{Schunk}
 \begin{Sinput}
 maui_roads <- roads('HI', 'Maui')
-\end{Sinput}
-\begin{Soutput}
-#> Using FIPS code '15' for state 'HI'
-#> Using FIPS code '009' for 'Maui County'
-\end{Soutput}
-\begin{Sinput}
+
 maui_kw_roads <- rbind_tigris(kw_roads, maui_roads)
 
 plot(maui_kw_roads)
 \end{Sinput}
+\end{Schunk}
 
-\includegraphics{walker-rudis_files/figure-latex/unnamed-chunk-5-1} \end{Schunk}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{maui_kw}
+  \caption{Roads in Maui County and Kalawao County, Hawaii.}
+  \label{figure:maui_kw}
+\end{figure}
 
 The Census Bureau releases updated TIGER/Line shapefiles every year, and
 these yearly updates are available to tigris users. tigris defaults to
@@ -247,17 +254,9 @@ library(ggplot2)
 library(ggthemes)
 
 vt <- state_legislative_districts('Vermont', house = 'upper', cb = TRUE)
-\end{Sinput}
-\begin{Soutput}
-#> Using FIPS code '50' for state 'Vermont'
-\end{Soutput}
-\begin{Sinput}
+
 vt_map <- fortify(vt)
-\end{Sinput}
-\begin{Soutput}
-#> Regions defined for each Polygons
-\end{Soutput}
-\begin{Sinput}
+
 ggplot() + 
   geom_map(data = vt_map, map = vt_map, 
            aes(x = long, y = lat, map_id = id), 
@@ -266,8 +265,14 @@ ggplot() +
   coord_map() + 
   theme_map()
 \end{Sinput}
+\end{Schunk}
 
-\includegraphics{walker-rudis_files/figure-latex/unnamed-chunk-6-1} \end{Schunk}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{vt_districts}
+  \caption{State Senate districts in Vermont.}
+  \label{figure:vt_districts}
+\end{figure}
 
 Commonly, geographic visualization will involve more that just plotting
 the outlines of the data, however. Instead, practitioners will want to
@@ -642,10 +647,23 @@ get_zips('Sacramento') %>% map_zips(palette = 'YlGnBu')
 
 \subsection{Conclusion}\label{conclusion}
 
-Some comments here about how tigris fits in with other geospatial
-analysis and visualization packages; how the R ecosystem rivals
-traditional desktop GIS in its functionality and in many ways is more
-flexible.
+This paper has summarized several ways in which R users commonly work
+with spatial data, and how the \textbf{tigris} package can facilitate,
+improve, and simplify those workflows. Access to high-quality spatial
+data is essential for the geospatial analyst; to respond to this,
+\textbf{tigris} provides direct access to the Census Bureau's TIGER/Line
+and cartographic boundary files using a simple and consistent API.
+
+More broadly, the examples presented in this article illustrate some
+clear advantages that R has over traditional desktop Geographic
+Information Systems software in the areas of geographic analysis and
+visualization. Certainly, code-based workflows in R make geospatial
+analyses reproducible, which has long been an issue with desktop GIS
+software, which -- while scriptable -- is often manipulated using a
+graphical user interface. The examples in this article show that an
+entire geospatial workflow -- from data acquisition to data preparation
+to spatial analysis to static or interactive cartography -- can take
+place entirely within R.
 
 \bibliography{RJreferences}
 
