@@ -13,6 +13,7 @@ author:
     - 
     - 
     email: 
+
 abstract: >
   The TIGER/Line shapefiles from the United States Census Bureau are commonly used for the mapping and analysis of US demographic trends.  The `tigris` package provides a uniform interface for R users to download and work with these shapefiles.  Functions in `tigris` allow R users to request Census geographic datasets using familiar geographic identifiers and return those datasets as Spatial DataFrames.  Once downloaded, `tigris` helps R users flexibly combine geographic datasets and join them to tabular data.  In turn, `tigris` helps facilitate both the visualization of and analysis spatial data in R.  This article provides an overview of such geospatial workflows in R, and illustrates how the tigris package can assist with such workflows by providing programmatic access to spatial data.  
   
@@ -33,13 +34,17 @@ The \CRANpkg{tigris} package aims to simplify the process of working with these 
 To cover: 
 
 * Overview of the TIGER/Line shapefiles
+    * Basics - what they are, why they were first developed, what they provide
 * Objects of class `Spatial` in R and the `rgdal` package
+    * Cite heavily _Applied Spatial Data Analysis with R_ here to give definitions.  Mention GDAL and how it is used in this context.  
 * Other packages, including: 
     * `USCensus2010`
     * `USABoundaries`
     * `acs`
     * `choroplethr`
 * Space `tigris` occupies - uniform interface for downloading and delimiting all TIGER/Line and cartographic boundary shapefiles
+
+
 
 ## Core functionality
 
@@ -106,9 +111,11 @@ When tigris downloads Census shapefiles to the R user's computer, it uses the \C
 
 Some Census shapefiles, like roads, are only available by county; however, an R user may want a roads dataset that represents multiple counties.  tigris has built-in functionality to handle these circumstances.  Data loaded into R by tigris have a special attribute, `tigris_type`, that identifies the type of geographic data represented by the object.  In turn, objects of the same `tigris_type` can be combined using the function `rbind_tigris`, which takes multiple tigris objects (or optionally a list) and combines them into a single object.  
 
-```{r}
+```{r, eval = FALSE}
 
 tigris_type(kw_roads)
+
+# [1] "road"
 
 ```
 

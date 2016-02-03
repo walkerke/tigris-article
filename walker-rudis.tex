@@ -61,8 +61,22 @@ To cover:
 \tightlist
 \item
   Overview of the TIGER/Line shapefiles
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Basics - what they are, why they were first developed, what they
+    provide
+  \end{itemize}
 \item
   Objects of class \texttt{Spatial} in R and the \texttt{rgdal} package
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Cite heavily \emph{Applied Spatial Data Analysis with R} here to
+    give definitions. Mention GDAL and how it is used in this context.\\
+  \end{itemize}
 \item
   Other packages, including:
 
@@ -70,6 +84,8 @@ To cover:
   \tightlist
   \item
     \texttt{USCensus2010}
+  \item
+    \texttt{USABoundaries}
   \item
     \texttt{acs}
   \item
@@ -201,10 +217,9 @@ optionally a list) and combines them into a single object.
 \begin{Schunk}
 \begin{Sinput}
 tigris_type(kw_roads)
+
+# [1] "road"
 \end{Sinput}
-\begin{Soutput}
-#> [1] "road"
-\end{Soutput}
 \end{Schunk}
 
 \begin{Schunk}
